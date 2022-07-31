@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;600&display=swap');
+
+:root {
+  font-size: 16px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+*::selection{
+    color: rgb(231, 126, 143);
+}
+.alert-spcial{
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  overflow: hidden;
+  color: white;
+  background-color: rgb(36, 36, 36);
+  padding: 0.875rem 0rem;
+  text-align: center;
+  animation:glowing-red 5s linear 2s infinite alternate;;
+}
+@keyframes glowing-red {
+  from {color: red;}
+  to {color: whitesmoke;}
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  padding: 10px 0px 20px 0px;
+  /* position: relative; */
+  background-color: #333;
+  overflow: hidden;
+  margin: 42px 0px;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.575rem 1rem;
+  font-size: 1.063rem;
+  text-decoration: underline solid white 2px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  transform: scale(1.4);
+  text-decoration: underline solid rgb(0, 255, 242) 2px;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+    text-decoration: underline solid rgb(11, 199, 190) 2px;
+}
+/* Centered section inside the top navigation */
+.topnav-centered a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.575rem 1rem;
+  font-size: 1.063rem;
+  text-decoration: underline solid white 2px;
+}
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+.topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+.topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+}
+}
+.lobby{
+    margin-top: -3rem;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding: 3.75rem 0rem;
+    
+}
+.lobby h2{
+  font-size: 3.125rem;
+  font-weight: 700;
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+.lobby h2:hover{
+  transform: scale(1.2);
+}
+.lobby h3{
+  font-size: 1.775rem;
+  font-weight: 300;
+  animation-duration: 2.5s;
+  animation-name: slidein;
+}
+.autocomplete {
+  /* position: relative; */
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #000000;
+  padding: 0.625rem;
+  font-size: 1rem;
+} 
+input[type=text] {
+    background-color: #c7c7c7;
+    width: 100%;
+} 
+input[type=submit] {
+    background-color: rgb(11, 199, 190);
+    color: #fff;
+    cursor: pointer;
+} 
+input[type=submit]:hover{
+    color: #303030;
+    background-color: rgb(13, 233, 222);
+}
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+} 
+.autocomplete-items div {
+    padding: 0.625rem;
+    cursor: pointer;
+    background-color: rgb(226, 226, 226); 
+    border-bottom: 1px solid #d4d4d4; 
+} 
+/*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+}
+  /*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: rgb(11, 199, 190) !important; 
+    color: #ffffff; 
+}
+.row{
+  background-color: rgb(233, 233, 233);
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0.625rem;
+} 
+  /* Style the images inside the grid */
+.column img {
+    opacity: 1; 
+    cursor: pointer; 
+} 
+.column p{
+    text-align: center;
+    padding-top: 0.938rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.column p:hover{
+  transform: scale(1.3); 
+  text-decoration: underline solid rgb(11, 199, 190) 2px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+ /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+} 
+  /* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 0.938rem;
+    left: 0.938rem;
+    color: white;
+    font-size: 1.25rem;
+}
+  /* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.938rem;
+    color: white;
+    font-size: 2.188rem;
+    cursor: pointer;
+}
+#colour-git:hover{
+  color: #3B5998;
+}
+#colour-twitter:hover{
+  color: #55ACEE;;
+}
+#colour-google:hover{
+  color: #dd4b39;
+}
+#colour-linkedin:hover{
+  color: #007bb5;
+}
+#colour-youtube:hover{
+  color: #bb0000;
+}
